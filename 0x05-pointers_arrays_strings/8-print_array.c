@@ -6,6 +6,7 @@
  *
  * Description: prints n elements of an array
  * @a: pointer to array
+ * @n: int
  */
 
 void print_array(int *a, int n)
