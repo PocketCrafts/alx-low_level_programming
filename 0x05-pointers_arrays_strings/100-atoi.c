@@ -22,13 +22,13 @@ int _atoi(char *s)
 			break;
 		if (s[x] >= 48 && s[x] <= 57)
 		{
+			z *= 10;
+			z = z >= 0 ? z + (s[x] - 48) : z - (s[x] - 48);
 			if (z > 0 && y > 0)
 			{
 				z = y % 2 == 0 ? z : -(z);
 				y = 0;
 			}
-			z *= 10;
-			z = z >= 0 ? z + (s[x] - 48) : z - (s[x] - 48);
 		}
 	}
 	return (z);
