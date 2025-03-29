@@ -12,17 +12,16 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int x = 0;
+	int x;
 	int y = 0;
 
-	while (x < n)
+	for (x = 0; x < n; x++)
 	{
 		if (x == n)
 			break;
 		dest[x] = y > 0 ? '\0' : src[x];
 		if (src[x] == '\0')
 			y = 1;
-		x++;
 	}
 	return (dest);
 }
