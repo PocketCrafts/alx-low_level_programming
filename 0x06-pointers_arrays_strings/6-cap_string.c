@@ -14,6 +14,7 @@ char *cap_string(char *s)
 	int y;
 	char *t = " \t\n,;.!?\"(){}\0";
 
+	s[0] -= s[0] > 96 && s[0] < 123 ? 32 : 0;
 	for (x = 0; t[x] != '\0'; x++)
 	{
 		for (y = 0; s[y] != '\0'; y++)
