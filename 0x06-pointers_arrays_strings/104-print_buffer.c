@@ -17,9 +17,14 @@ void print_buffer(char *b, int size)
 	{
 		if (x % 10 == 0)
 			printf("%08x: ", x), y = x;
-		for (y = x; y < x + 10; y += 2)
-			y < size? printf("%02x%02x ", b[y], b[y + 1]) :
-				printf("%5c", 32);
+		for (y = x; y < x + 10; y++)
+		{
+			if (y % 2 == 0 && y % 10 != 0)
+				printf(" ");
+			y < size ? printf("%02x", b[y]) :
+				printf("  ");
+		}
+		printf(" ");
 		for (y = x; y < size && y < x + 10; y++)
 		{
 			if (b[y] > 31 && b[y] < 127)
