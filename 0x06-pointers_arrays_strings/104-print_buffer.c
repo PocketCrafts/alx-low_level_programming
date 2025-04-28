@@ -13,6 +13,8 @@ void print_buffer(char *b, int size)
 {
 	int x, y;
 
+	if (size <= 0)
+		printf("\n");
 	for (x = 0; x < size; x += 10)
 	{
 		if (x % 10 == 0)
@@ -34,5 +36,4 @@ void print_buffer(char *b, int size)
 		}
 		printf("\n");
 	}
-	printf("\n");
 }
